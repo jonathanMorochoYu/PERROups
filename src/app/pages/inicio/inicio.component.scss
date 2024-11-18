@@ -1,0 +1,94 @@
+
+  /* Estilos para la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #e9e9e9;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #7033b0;
+  }
+  
+  
+  /* Estilo específico para el botón de eliminar */
+  .eliminar-btn {
+    background-color: #f44336; 
+  }
+  
+  .eliminar-btn:hover {
+    background-color: #690f0e; 
+  }
+  
+  
+  /* Estilos para los inputs */
+  input[type="number"], input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Estilos generales */
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #7c5e5e;
+  margin: 20px;
+}
+
+  
+ 
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  br {
+    margin-bottom: 10px;
+  }

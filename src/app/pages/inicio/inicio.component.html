@@ -1,0 +1,126 @@
+<div>
+
+  <h1>Bienvenido Jonathan Morocho</h1>
+    <h2>UPS Demo </h2>
+  
+    <p> Plataformas Web </p>
+
+    <p> Lista 1</p><strong> Aplicacion:</strong> Las aplicaciones materiales son el uso de recursos físicos (como metales, plásticos o madera) en procesos o productos.
+    <p>Lista 2</p><strong> Materiales:</strong>Los residuos son los desechos generados durante estos procesos o después de su uso, y pueden ser reciclados, reutilizados o eliminados
+    <p> Lista 3</p><strong> Residuos:</strong> Los residuos son los desechos generados durante estos procesos o después de su uso, y pueden ser reciclados, reutilizados o eliminados adecuadamente para minimizar el impacto ambiental.
+
+    <p>Seccion EDAD</p>
+    <p>
+    <strong>Edad=</strong> {{edad}} {{esMayorDeEdad()}}<br>
+    <strong>Salario mensual=</strong> {{salario}}<br>
+    <strong>Salario anual=</strong> {{salario *12}} <br>
+   </p>
+  
+    <hr>
+    <p (click)="incrementar()">
+      Edad = {{edad}} <span *ngIf=" edad < 18 ">Es mayor de edad </span><br>
+      <ul>
+        <li *ngFor ="let sueldo of sueldos"> {{sueldo * contador}}</li>
+      </ul>
+
+      <hr>
+
+      <p>{{contador}}
+        <button (click)="incrementar()">Incrementar</button>
+      </p>
+
+    <hr>
+
+    <form action="">
+
+    </form>
+
+    A= <input type="number" name="txtA" [(ngModel)]="a"> <br>
+    B= <input type="number" name="txtB" [(ngModel)]="b"> <br>
+    C= <input type="number" name="txtC" [(ngModel)]="c"> <br>
+    <button (click)="sumar()">Sumar</button>
+
+    <hr>
+
+    <table border="1">
+      <tr>
+        <th>Codigo</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+      <tr *ngFor="let articulo of articulos">
+        <td>{{articulo.codigo}}</td>
+        <td>{{articulo.descripcion}}</td>
+        <td>{{articulo.precio}}</td>
+        <td>
+
+          <button (click)="seleccionar(articulo.codigo)">Seleccionar</button>
+          <button class="eliminar-btn" (click)="eliminar(articulo.codigo)">Eliminar</button>
+         
+        </td>
+      
+      </tr>
+      
+    </table>
+  <app-formulario
+    [codigo]="codigo"
+    [descripcion]="descripcion"
+    [precio]="precio"
+    (guardarArticulo)="guardarArticulo($event)">
+    </app-formulario>
+
+    <!----Codigo <input type="number" name="txtCodigo" [(ngModel)]="codigo"> <br>
+    Descripcion <input type="text" name="txtDescripcion" [(ngModel)]="descripcion"> <br>
+    Precio <input type="number" name="txtPrecio" [(ngModel)]="precio"> <br>
+    <button (click)="guardar()">Gurardar</button>
+    --->
+    <hr>
+    <app-dado #dado1 color="Orange "></app-dado>
+    <app-dado #dado2 color="Gray"></app-dado> 
+    <app-dado #dado3 color="Brown "></app-dado> 
+    
+    <br>
+    <button (click)="dado1.lanzar()"> lanzar 1</button>
+    
+    <button (click)="dado2.lanzar()"> lanzar 2</button>
+    <button (click)="dado3.lanzar()"> lanzar 3</button>
+    <button (click)="lanzar()"> Lanzar todos</button>
+    
+    <div *ngIf="imagenURL">
+      <img [src]="imagenURL" alt="Felicidades Ganaste">
+    </div>
+    
+ <hr/>
+ <br>
+ {{minuto}}min.
+ <app-cronometro (minutos)=" actualizar($event)"></app-cronometro>
+ <hr/>
+
+ <hr>
+
+ <table border="1">
+  <tr>
+    <th>Nombre</th>
+    <th>Raza</th>
+    <th>Foto</th>
+    <th>Acciones</th>
+  </tr>
+  <tr *ngFor="let perro of perros">
+    <td>{{perro.nombre}}</td>
+    <td>{{perro.raza}}</td>
+    
+    
+     <img src="https://img.freepik.com/vector-gratis/ilustracion-icono-vector-dibujos-animados-hueso-mordedura-perro-pug-lindo-naturaleza-animal-icono-concepto-aislado-premium_138676-7370.jpg?size=338&ext=jpg&ga=GA1.1.967060102.1728864000&semt=ais_hybrid-rr-similar" width="60px"> 
+    
+    
+    <td>
+      <button class="eliminar-btn" (click)="eliminar(perro.nombre)">Borrar</button>
+      <button (click)="seleccionar(perro.nombre)">Seleccionar</button>
+      
+    </td>
+  
+  </tr>
+  
+</table>
+</div>
